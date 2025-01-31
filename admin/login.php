@@ -14,18 +14,11 @@ if (isset($_POST['login'])) {
     $select_seller->execute([$email]);
     $row = $select_seller->fetch(PDO::FETCH_ASSOC);
 
-    if ($row) {
-        // Verify the password using password_verify
-        if (password_verify($pass, $row['password'])) {
-            // Set a cookie for the logged-in user
-            setcookie('seller_id', $row['id'], time() + 60 * 60 * 24 * 30, '/');
-            header('location:dashboard.php');
-            exit; // Stop further execution after redirection
-        } else {
-            $warning_msg[] = 'Incorrect email or password!';
-        }
+    if ($select_seller->rowCount() > 0) {
+        setcookie('seller_id', $row['id'], time() + 60 * 60 * 24 * 30, '/');
+        header('location:dashboard.php');
     } else {
-        $warning_msg[] = 'Incorrect email or password!';
+        $warning_msg[] = 'incorrect email or password!';
     }
 }
 

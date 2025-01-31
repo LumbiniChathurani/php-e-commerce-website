@@ -126,25 +126,28 @@ section{
 .banner{
     margin-top: 5rem;
     width: 100%;
-    height: 80vh;
+    height: 90vh;
     display: flex;
     align-items: center;
     background-position: center;
     background-size: cover;
-    animation: banner 2s infinite alternate;
+    animation: banner 10s infinite alternate;
 }
 @keyframes banner{
     0%{
-        background-image: url('../image/about-slider0.jpg');
+        background-image: url('../image/beautiful-pink-flowers-on-pink-background-ai-generated-free-photo.jpg');
     }
     100%{
-        background-image: url('../image/about-slider2.jpg');
+        background-image: url('../image/pink-flowers-pink-background_967785-104830.avif');
     }
 }
 
 .banner .detail{
-    place-content: 4%;
+    padding-left: 4%;
     line-height: 1.5;
+}
+.banner .detail a{
+    color: #000;
 }
 .banner .detail p{
     font-size: 16px;
@@ -191,10 +194,10 @@ left: 0;
 top: 0;
 right: 0;
 height: 80px;
-z-index: 151px;
+z-index: 200px;
 box-shadow: 0 5px 10px 0 #aaa;
 padding: 0 50px;
-background-color: #fff;
+background: #fff;
 display: flex;
 justify-content: space-between;
 align-items: center;
@@ -250,9 +253,10 @@ header .right{
 .sidebar{
     background-color: var(--white-alfa-25);
     backdrop-filter: var(--backdrop-filter);
-    padding-top: 2rem;
+    padding-top: 0rem;
     width: 20rem;
     height: 100vh;
+    position: fixed;
     top: 0;
     left: -30rem;
     width: 0;
@@ -445,4 +449,144 @@ font-weight: bold;
 }
 .form-container .image{
     height: 30rem;
+}
+/*-----------footer section------------*/
+.newsletter{
+    width: 100%;
+   background-image: url('../image/pink-flowers-pink-background_967785-104830.avif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 5%;
+}
+.newsletter .box-detail{
+    text-align: center;
+}
+.newsletter .box-detail h1{
+    text-transform: capitalize;
+}
+.newsletter .box-detail p{
+    font-size: 18px;
+    line-height: 1.5;
+    color: #666;
+    margin: 1rem 0;
+}
+.newsletter .box-detail input{
+    width: 40rem;
+    padding: 1.0rem;
+    border: none;
+}
+.newsletter .box-detail .icons i{
+    background-color: var(--pink-opacity);
+    border: 2px solid var(--main-color);
+    backdrop-filter: var(--backdrop-filter);
+    box-shadow: var(--box-shadow);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: var(--main-color);
+    line-height: 50px;
+    transition: .5s;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin: 1rem;
+}
+.newsletter button{
+    border: none;
+}
+.client{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    align-items: center;
+    justify-content: center;
+    padding: 4% 0;
+    margin: 0 auto;
+}
+.client .img-box{
+    text-align: center;
+    cursor: pointer;
+}
+.client img{
+    filter: grayscale(1);
+    
+}
+.client img:hover{
+    filter: grayscale(0);
+}
+footer{
+    background-image: url('../image/footer.png');
+    background-size: cover;
+    padding: 259px 0 0;
+    width: 100%;
+}
+footer .content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    align-items: center;
+    justify-content: center;
+}
+
+footer .content .box{
+    margin: 1rem;
+    line-height: 1.7rem;
+    color: #000;
+}
+footer .content .box h3{
+    text-transform: capitalize;
+    margin-bottom: .5rem;
+}
+footer .content .box a{
+    font-size: 16px;
+    display: block;
+    color: #000;
+    text-transform: capitalize;
+}
+footer .content .box a:hover{
+    color: var(--main-color);
+}
+footer .content .box i{
+    margin-right: .5rem;
+}
+footer .content .box p{
+    line-height: 1.5;
+}
+footer .content .box .icons{
+    margin-top: 1rem;
+}
+footer .content .box .icons i{
+    background-color: var(--pink-opacity);
+    border: 1px solid var(--main-color);
+    cursor: pointer;
+    margin: .2rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: var(--main-color);
+    line-height: 40px;
+    transition: .5s;
+    padding-left: .7rem;
+}
+
+footer .bottom{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 2rem;
+    margin-top: 2rem;
+    border-top: 1px solid #fff;
+    line-height: 2;
+    color: #000;
+}
+footer .bottom a{
+    text-transform: capitalize;
+    color: #000;
+    font-weight: bold;
+}
+
+.heading2{
+    height: 100px;
 }
