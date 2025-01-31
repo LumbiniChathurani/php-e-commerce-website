@@ -286,6 +286,8 @@ header .right{
     margin-top: 2.5rem;
 }
 .logo-img{
+    width: 150px;
+    height: 130px;
     border-radius: 50%;
     padding: .5rem;
     border: 2px solid var(--main-color);
@@ -589,4 +591,90 @@ footer .bottom a{
 
 .heading2{
     height: 100px;
+}
+/*-----------dashboard------------*/
+.dashboard .box-container{
+    grid-template-columns: repeat(auto-fit, 25rem);
+   
+}
+.dashboard .box-container .box{
+text-align: center;
+padding: 1.5rem;
+padding-bottom: 3rem;
+box-shadow: 5px 5px 10px rgba(63, 38, 51, 0.3);
+}
+.dashboard .box-container .box h3{
+    font-size: 2.7rem;
+}
+.dashboard .box-container .box p{
+    padding: 1rem;
+    font-size: 1.8rem;
+    text-transform: capitalize;
+}
+/*----------------seller profile-----------------*/
+.seller_profile{
+    background-image: url('../image/p.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.seller_profile .detail{
+    background-color: var(--white-alfa-25);
+    border: 2px solid var(--white-alfa-40);
+    backdrop-filter: var(--backdrop-filter);
+    /*box-shadow: var(--box-shadow);*/
+    text-align: center;
+    border-radius: .5rem;
+    padding: 1rem;
+    box-shadow: 5px 5px 10px rgba(63, 38, 51, 0.3);
+}
+.seller_profile .detail .seller{
+    margin-bottom: 2rem;
+}
+.seller_profile .detail .seller img{
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: .5rem;
+    padding: .5rem;
+    background-color: var(--main-color);
+}
+.seller_profile .detail .seller h3{
+    font-size: 2.5rem;
+    margin: .5rem 0;
+    text-transform: capitalize;
+}
+.seller_profile .detail .seller span{
+    font-size: 1.2rem;
+    display: block;
+    color: #666;
+    margin-bottom: .8rem;
+    text-transform: capitalize;
+}
+.seller_profile .detail .flex{
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 4rem 0;
+}
+.seller_profile .detail .flex .box{
+    flex: 1 1 25rem;
+    border-radius: .5rem;
+    background-color: #ccc3;
+    padding: 2rem;
+    box-shadow: 5px 5px 10px rgba(63, 38, 51, 0.3);
+}
+.seller_profile .detail .flex span{
+    color: var(--main-color);
+    display: block;
+    margin-bottom: .5rem;
+    font-size: 2.5rem;
+    text-transform: capitalize;
+}
+.seller_profile .detail .flex p{
+    font-size: 2rem;
+    padding: .5rem 0;
+    margin-bottom: 1rem;
 }

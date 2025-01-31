@@ -97,6 +97,46 @@ if (isset($_COOKIE['seller_id'])) {
                 <p>total registered users</p>
                 <a href="user_accounts.php" class="btn">view users</a>
             </div>
+            <div class="box">
+                <?php
+                $select_sellers = $conn->prepare("SELECT * FROM `sellers`");
+                $select_sellers->execute();
+                $num_of_sellers = $select_sellers->rowCount();
+                ?>
+                <h3><?= $num_of_sellers; ?></h3>
+                <p>total sellers</p>
+                <a href="seller_accounts.php" class="btn">view sellers</a>
+            </div>
+            <div class="box">
+                <?php
+                $select_canceled_orders = $conn->prepare("SELECT * FROM `orders` WHERE seller_id = ? AND status=?");
+                $select_canceled_orders->execute([$seller_id, 'canceled']);
+                $total_canceled_orders = $select_product->rowCount();
+                ?>
+                <h3><?= $total_canceled_orders; ?></h3>
+                <p>canceled orders</p>
+                <a href="admin_order.php" class="btn">canceled orders</a>
+            </div>
+            <div class="box">
+                <?php
+                $select_confirm_orders = $conn->prepare("SELECT * FROM `orders` WHERE seller_id = ? AND status=?");
+                $select_confirm_orders->execute([$seller_id, 'in progress']);
+                $total_confirm_orders = $select_confirm_orders->rowCount();
+                ?>
+                <h3><?= $total_confirm_orders; ?></h3>
+                <p>confirm orders</p>
+                <a href="admin_order.php" class="btn">confirm orders</a>
+            </div>
+            <div class="box">
+                <?php
+                $select_orders = $conn->prepare("SELECT * FROM `orders` WHERE seller_id = ?");
+                $select_orders->execute([$seller_id]);
+                $total_orders = $select_orders->rowCount();
+                ?>
+                <h3><?= $total_orders; ?></h3>
+                <p>total orders</p>
+                <a href="admin_order.php" class="btn">total orders</a>
+            </div>
         </div>
     </section>
 
