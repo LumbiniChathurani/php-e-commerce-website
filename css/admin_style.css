@@ -389,7 +389,9 @@ header .right{
 .form-container .register{
     width: 60rem;
 }
-
+.form-container .register .img-box{
+    text-align: center;
+}
 .form-container .register img{
     width: 180px;
     height: 180px;
@@ -530,6 +532,7 @@ footer .content{
     grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
     align-items: center;
     justify-content: center;
+    margin-top: -200px;
 }
 
 footer .content .box{

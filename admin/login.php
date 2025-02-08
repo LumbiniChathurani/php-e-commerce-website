@@ -2,7 +2,6 @@
 include '../components/connect.php';
 
 if (isset($_POST['login'])) {
-
     $email = $_POST['email'];
     $email = filter_var($email, FILTER_SANITIZE_EMAIL);
 
@@ -14,15 +13,29 @@ if (isset($_POST['login'])) {
     $select_seller->execute([$email]);
     $row = $select_seller->fetch(PDO::FETCH_ASSOC);
 
-    if ($select_seller->rowCount() > 0) {
-        setcookie('seller_id', $row['id'], time() + 60 * 60 * 24 * 30, '/');
-        header('location:dashboard.php');
+    var_dump($pass);
+    var_dump($row['password']);
+
+    $hashed_pass = password_hash($pass, PASSWORD_DEFAULT);
+    var_dump($hashed_pass);
+
+    if ($row) { // If email exists
+        echo "raw password is: ", $pass, " , hashed: ", $row['password'];
+        if (password_verify($pass, $row['password'])) { // Verify password
+            echo "password verify ok";
+            setcookie('seller_id', $row['id'], time() + 60 * 60 * 24 * 30, '/');
+            header('location:dashboard.php');
+            exit();
+        } else {
+            echo "password verify failed";
+            $warning_msg[] = 'Incorrect email or password!';
+        }
     } else {
-        $warning_msg[] = 'incorrect email or password!';
+        $warning_msg[] = 'Incorrect email or password!';
     }
 }
-
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
