@@ -681,3 +681,191 @@ box-shadow: 5px 5px 10px rgba(63, 38, 51, 0.3);
     padding: .5rem 0;
     margin-bottom: 1rem;
 }
+/*------------------view products ------------------*/
+.show_products {
+    background-image: url('your-image-url-here'); /* Provide a valid image URL */
+    background-position: center;
+    background-size: cover;
+    padding: 8% 0;
+}
+
+.show_products .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1rem;
+}
+
+.show_products .box-container .box {
+    position: relative;
+    margin: 1rem;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 0.5rem;
+    transition: 0.3s ease-in-out;
+}
+
+/* Image Styling */
+.show_products .box-container .box .image {
+    width: 100%;
+    height: 35rem;
+    object-fit: cover;
+    transform: scale(1);
+    transition: transform 0.5s ease-in-out;
+}
+
+.show_products .box-container .box:hover .image {
+    transform: scale(1.1);
+}
+
+/* Status Label */
+.show_products .box-container .box .status {
+    position: absolute;
+    left: 2%;
+    top: 2%;
+    text-transform: capitalize;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    background-color: #fff;
+    font-weight: bold;
+}
+
+/* Price Badge */
+.show_products .box-container .box .price {
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    border-radius: 50%;
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    font-size: 1rem;
+    background-color: var(--main-color);
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Content Box */
+.show_products .box-container .box .content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    padding: 0;
+    overflow: hidden;
+    transition: height 0.5s ease-in-out, padding 0.3s ease-in-out;
+}
+
+/* Show content on hover */
+.show_products .box-container .box:hover .content {
+    height: 9rem;
+    padding: 1rem;
+}
+
+/* Title inside content */
+.show_products .box-container .box .title {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-bottom: 1rem;
+}
+
+/* Button */
+.show_products .box-container .box .btn {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    text-align: center;
+    background-color: var(--main-color);
+    color: white;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.show_products .box-container .box .btn:hover {
+    background-color: #444;
+}
+
+/* Button Wrapper */
+.show_products .box-container .box .button {
+    width: 100%;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+
+
+/*--------------view_product--------------*/
+.read-product {
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.5rem;
+    max-width: 1100px;
+    margin: 2rem auto;
+}
+
+.read-product .box {
+    width: 100%;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    box-shadow: var(--box-shadow);
+    position: relative;
+}
+
+.read-product .box .status {
+    border-radius: 0.5rem;
+    padding: 0.5rem 2rem;
+    font-size: 1.1rem;
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+.read-product .box .price {
+    position: absolute;
+    top: 1%;
+    right: 5%;
+    font-weight: bold;
+    color: var(--main-color);
+    font-size: 2rem;
+}
+
+.read-product .box .image {
+    width: 100%;
+    border-radius: 0.5rem;
+    margin-top: 1.5rem;
+}
+
+.read-product .box .title {
+    font-size: 2.5rem;
+    margin-top: 1.5rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.read-product .box .content {
+    line-height: 1.2;
+    color: #666;
+    padding: 1rem 0;
+    font-size: 1.4rem;
+}
+
+.read-product .box .flex-btn {
+    display: flex;
+    justify-content: space-between;
+}
+
+.read-product .box .btn {
+    width: 33%;
+    text-align: center;
+}
+
+.read-product .box .flex-btn a {
+    height: 50px;
+    margin-top: 0.8rem;
+}
+
