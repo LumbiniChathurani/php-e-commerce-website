@@ -47,7 +47,7 @@ if (isset($_COOKIE['seller_id'])) {
                 <p><?= $fetch_profile['name']; ?></p>
                 <a href="update.php" class="btn">update profile</a>
             </div>
-            <div class="box">
+            <!-- <div class="box">
                 <?php
                 $select_message = $conn->prepare("SELECT * FROM `message`");
                 $select_message->execute();
@@ -56,7 +56,7 @@ if (isset($_COOKIE['seller_id'])) {
                 <h3><?= $number_of_msg; ?></h3>
                 <p>unread messages</p>
                 <a href="admin_message.php" class="btn">see messages</a>
-            </div>
+            </div>  -->
             <div class="box">
                 <?php
                 $select_product = $conn->prepare("SELECT * FROM `products` WHERE seller_id = ?");
@@ -84,10 +84,10 @@ if (isset($_COOKIE['seller_id'])) {
                 $num_of_deactive_product = $select_deactive_product->rowCount();
                 ?>
                 <h3><?= $num_of_deactive_product; ?></h3>
-                <p>total active products</p>
+                <p>total deactive products</p>
                 <a href="view_product.php" class="btn">view deactive product</a>
             </div>
-            <div class="box">
+            <!-- <div class="box">
                 <?php
                 $select_users = $conn->prepare("SELECT * FROM `users`");
                 $select_users->execute();
@@ -96,7 +96,7 @@ if (isset($_COOKIE['seller_id'])) {
                 <h3><?= $num_of_users; ?></h3>
                 <p>total registered users</p>
                 <a href="user_accounts.php" class="btn">view users</a>
-            </div>
+            </div> -->
             <div class="box">
                 <?php
                 $select_sellers = $conn->prepare("SELECT * FROM `sellers`");
@@ -107,7 +107,7 @@ if (isset($_COOKIE['seller_id'])) {
                 <p>total sellers</p>
                 <a href="seller_accounts.php" class="btn">view sellers</a>
             </div>
-            <div class="box">
+            <!-- <div class="box">
                 <?php
                 $select_canceled_orders = $conn->prepare("SELECT * FROM `orders` WHERE seller_id = ? AND status=?");
                 $select_canceled_orders->execute([$seller_id, 'canceled']);
@@ -116,8 +116,8 @@ if (isset($_COOKIE['seller_id'])) {
                 <h3><?= $total_canceled_orders; ?></h3>
                 <p>canceled orders</p>
                 <a href="admin_order.php" class="btn">canceled orders</a>
-            </div>
-            <div class="box">
+            </div>-->
+            <!-- <div class="box">
                 <?php
                 $select_confirm_orders = $conn->prepare("SELECT * FROM `orders` WHERE seller_id = ? AND status=?");
                 $select_confirm_orders->execute([$seller_id, 'in progress']);
@@ -126,8 +126,8 @@ if (isset($_COOKIE['seller_id'])) {
                 <h3><?= $total_confirm_orders; ?></h3>
                 <p>confirm orders</p>
                 <a href="admin_order.php" class="btn">confirm orders</a>
-            </div>
-            <div class="box">
+            </div>-->
+            <!-- <div class="box">
                 <?php
                 $select_orders = $conn->prepare("SELECT * FROM `orders` WHERE seller_id = ?");
                 $select_orders->execute([$seller_id]);
@@ -136,7 +136,7 @@ if (isset($_COOKIE['seller_id'])) {
                 <h3><?= $total_orders; ?></h3>
                 <p>total orders</p>
                 <a href="admin_order.php" class="btn">total orders</a>
-            </div>
+            </div>-->
         </div>
     </section>
 

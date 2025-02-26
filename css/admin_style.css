@@ -762,7 +762,7 @@ box-shadow: 5px 5px 10px rgba(63, 38, 51, 0.3);
 
 /* Show content on hover */
 .show_products .box-container .box:hover .content {
-    height: 9rem;
+    height: 15rem;
     padding: 1rem;
 }
 
@@ -867,5 +867,15 @@ box-shadow: 5px 5px 10px rgba(63, 38, 51, 0.3);
 .read-product .box .flex-btn a {
     height: 50px;
     margin-top: 0.8rem;
+}
+.product-detail{
+    font-size: 18px;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.new1{
+    height: 100px;
+    background-color: brown;
 }
 

@@ -67,10 +67,11 @@ if (isset($_POST['delete'])) {
                         <p class="price">Rs.<?= htmlspecialchars($fetch_products['price']); ?>/-</p>
                         <div class="content">
                             <div class="title"> <?= htmlspecialchars($fetch_products['name']); ?> </div>
+                            <div class="product-detail"> <?= htmlspecialchars($fetch_products['product_detail']); ?> </div>
                             <div class="flex-btn">
                                 <a href="edit_product.php?id=<?= $fetch_products['id']; ?>" class="btn">Edit</a>
                                 <button type="submit" name="delete" class="btn" onclick="return confirm('Delete this product?');">Delete</button>
-                                <a href="view_product.php?post_id=<?= $fetch_products['id']; ?>" class="btn">View Product</a>
+                                <!--<a href="view_product.php?post_id=<?= $fetch_products['id']; ?>" class="btn">View Product</a> -->
                             </div>
                         </div>
                     </form>

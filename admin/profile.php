@@ -61,11 +61,11 @@ $total_orders = $select_orders->rowCount();
                     <p>total products</p>
                     <a href="view_product.php" class="btn">view products</a>
                 </div>
-                <div class="box">
+                <!--  <div class="box">
                     <span><?= $total_orders; ?></span>
                     <p>total orders placed</p>
                     <a href="admin_order.php" class="btn">view orders</a>
-                </div>
+                </div>  -->
             </div>
         </div>
     </section>
